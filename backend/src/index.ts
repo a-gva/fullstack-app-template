@@ -29,14 +29,14 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   });
 });
 
-app.listen(3333);
-console.log('Server ir running on port 3333');
+app.listen(process.env.BACKEND_PORT);
+console.log(
+  `⚙️  Backend Server | Running on port: ${process.env.BACKEND_PORT} ⚙️`
+);
 
 AppDataSource.initialize()
   .then(() => {
-    console.log(
-      `🚀 🚀 🚀 Data Source OK! Port: ${process.env.DB_PORT} 🚀 🚀 🚀`
-    );
+    console.log(`🚀 DataBase | Running on port: ${process.env.DB_PORT} 🚀`);
   })
   .catch((err) => {
     console.log('😭 😭 😭');

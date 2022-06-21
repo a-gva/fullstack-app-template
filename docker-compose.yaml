@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    container_name: backend-app
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./backend:/app
+      - ./app/node_modules
+  frontend:
+    build: ./frontend
+    container_name: frontend-app
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true

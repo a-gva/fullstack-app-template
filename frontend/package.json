@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "start": "vite",
+    "build": "node node_modules/esbuild/install.js tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
