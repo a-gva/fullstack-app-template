@@ -18,7 +18,7 @@ export function FormUser() {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post('http://localhost:3333/users', data)
+      .post('http://localhost:3001/users', data)
       .then((res) => {
         console.log(res);
       })
