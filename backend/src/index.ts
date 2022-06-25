@@ -36,7 +36,9 @@ console.log(
 
 AppDataSource.initialize()
   .then(() => {
-    console.log(`🚀 DataBase | Running on port: ${process.env.DB_PORT} 🚀`);
+    console.log(
+      `🚀 🚀 🚀 Data Source OK! Port: ${process.env.DB_PORT} 🚀 🚀 🚀`
+    );
   })
   .catch((err) => {
     console.log('😭 😭 😭');
